@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="anpDash" opacity="0.8" prefHeight="831.0" prefWidth="910.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.ormculinaryacadamy.Controller.DashboardFormController">
+   <children>
+      <Text fill="#6b0909" layoutX="206.0" layoutY="90.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Welcome to Dashboard!">
+         <font>
+            <Font name="Keraleeyam Regular" size="64.0" />
+         </font>
+      </Text>
+      <Label layoutX="332.0" layoutY="251.0" prefHeight="141.0" prefWidth="208.0" style="-fx-background-color: grey; -fx-background-radius: 20;" />
+      <Label layoutX="338.0" layoutY="584.0" prefHeight="141.0" prefWidth="202.0" style="-fx-background-color: grey; -fx-background-radius: 20;" />
+      <Label layoutX="337.0" layoutY="416.0" prefHeight="141.0" prefWidth="202.0" style="-fx-background-color: grey; -fx-background-radius: 20;" />
+      <Label fx:id="program" layoutX="417.0" layoutY="281.0" prefHeight="67.0" prefWidth="84.0" style="-fx-background-color: grey;" textAlignment="CENTER">
+         <font>
+            <Font name="System Bold" size="30.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblStudent" layoutX="422.0" layoutY="454.0" prefHeight="67.0" prefWidth="84.0" style="-fx-background-color: grey;" textAlignment="CENTER">
+         <font>
+            <Font name="System Bold" size="30.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblUser" layoutX="426.0" layoutY="617.0" prefHeight="67.0" prefWidth="84.0" style="-fx-background-color: grey;" textAlignment="CENTER">
+         <font>
+            <Font name="System Bold" size="30.0" />
+         </font>
+      </Label>
+      <Text fill="#fff5cb" layoutX="360.0" layoutY="375.0" strokeType="OUTSIDE" strokeWidth="0.0" text="course count" wrappingWidth="145.76171875">
+         <font>
+            <Font name="System Bold Italic" size="20.0" />
+         </font>
+      </Text>
+      <Text fill="#fff0b2" layoutX="360.0" layoutY="542.0" strokeType="OUTSIDE" strokeWidth="0.0" text="student count">
+         <font>
+            <Font name="System Bold Italic" size="20.0" />
+         </font>
+      </Text>
+      <Text fill="#fff0b2" layoutX="379.0" layoutY="708.0" strokeType="OUTSIDE" strokeWidth="0.0" text="user count">
+         <font>
+            <Font name="System Bold Italic" size="20.0" />
+         </font>
+      </Text>
+      <Label fx:id="lblDate" layoutX="221.0" layoutY="128.0" prefHeight="58.0" prefWidth="547.0" textFill="#802701">
+         <font>
+            <Font name="System Bold" size="30.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

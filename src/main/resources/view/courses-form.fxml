@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="anpCourse" prefHeight="836.0" prefWidth="971.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.ormculinaryacadamy.Controller.CourseFormController">
+   <children>
+      <Pane layoutX="73.0" layoutY="129.0" prefHeight="411.0" prefWidth="827.0" style="-fx-background-color: #d7c1b3; -fx-border-radius: 15;">
+         <effect>
+            <DropShadow />
+         </effect>
+         <children>
+            <Button fx:id="btnSave" layoutX="111.0" layoutY="276.0" mnemonicParsing="false" onAction="#btnSaveOnAction" prefHeight="47.0" prefWidth="130.0" style="-fx-border-color: black; -fx-border-radius: 3; -fx-background-color:navy;" text="      SAVE" textFill="#fcf2f2">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnUpdate" layoutX="268.0" layoutY="276.0" mnemonicParsing="false" onAction="#btnUpdateOnAction" prefHeight="47.0" prefWidth="137.0" style="-fx-border-color: black; -fx-border-radius: 3; -fx-background-color: #67A03F;" text="     UPDATE" textFill="WHITE">
+               <font>
+                  <Font name="System Bold Italic" size="15.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnDelete" layoutX="424.0" layoutY="276.0" mnemonicParsing="false" onAction="#btnDeleteOnAction" prefHeight="47.0" prefWidth="130.0" style="-fx-border-color: black; -fx-border-radius: 3; -fx-background-color: crimson;" text="       DELETE" textFill="#fff8f8">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnClear" layoutX="586.0" layoutY="276.0" mnemonicParsing="false" onAction="#btnClearOnAction" prefHeight="47.0" prefWidth="130.0" style="-fx-border-color: black; -fx-border-radius: 3; -fx-background-color: yellow;" text="       CLEAR">
+               <font>
+                  <Font name="System Bold Italic" size="15.0" />
+               </font>
+            </Button>
+            <Label layoutX="310.0" layoutY="19.0" text="Add Courses" textFill="#6f0b0b">
+               <font>
+                  <Font name="System Bold" size="26.0" />
+               </font>
+            </Label>
+            <ImageView layoutX="134.0" layoutY="289.0">
+               <image>
+                  <Image url="@../assets/icons8-save-26.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="35.0" fitWidth="37.0" layoutX="281.0" layoutY="284.0">
+               <image>
+                  <Image url="@../assets/icons8-update-48.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="26.0" fitWidth="32.0" layoutX="439.0" layoutY="287.0">
+               <image>
+                  <Image url="@../assets/icons8-delete-32.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="31.0" fitWidth="32.0" layoutX="599.0" layoutY="282.0">
+               <image>
+                  <Image url="@../assets/icons8-clear-48.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <Text layoutX="74.0" layoutY="101.0" strokeType="OUTSIDE" strokeWidth="0.0" text="COURSE  FORM">
+         <font>
+            <Font name="System Bold" size="30.0" />
+         </font>
+      </Text>
+      <TextField fx:id="txtDuration" layoutX="226.0" layoutY="326.0" onAction="#txtDurationOnAction" prefHeight="35.0" prefWidth="222.0" promptText="duartion" style="-fx-background-radius: 5;" />
+      <TextField fx:id="txtFree" layoutX="525.0" layoutY="328.0" onAction="#txtFreeOnAction" prefHeight="35.0" prefWidth="210.0" promptText="fee" style="-fx-background-radius: 5;" />
+      <TextField fx:id="txtName" layoutX="524.0" layoutY="246.0" onAction="#txtNameOnAction" prefHeight="35.0" prefWidth="210.0" promptText="name" style="-fx-background-radius: 5;" />
+      <TextField fx:id="txtId" layoutX="227.0" layoutY="246.0" onAction="#txtIdOnAction" prefHeight="35.0" prefWidth="222.0" promptText="id" style="-fx-background-radius: 5;" />
+      <Text layoutX="228.0" layoutY="234.0" strokeType="OUTSIDE" strokeWidth="0.0" text="COURSE ID">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Text>
+      <Text layoutX="230.0" layoutY="316.0" strokeType="OUTSIDE" strokeWidth="0.0" text="DURATION">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Text>
+      <Text layoutX="524.0" layoutY="235.0" strokeType="OUTSIDE" strokeWidth="0.0" text="COURSE NAME">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Text>
+      <Text layoutX="531.0" layoutY="319.0" strokeType="OUTSIDE" strokeWidth="0.0" text="COURSE FEE">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Text>
+      <TableView fx:id="tblCourse" layoutX="73.0" layoutY="558.0" prefHeight="200.0" prefWidth="827.0">
+         <columns>
+            <TableColumn fx:id="colId" prefWidth="112.80001831054688" text="ID" />
+            <TableColumn fx:id="colName" prefWidth="236.0" text="NAME" />
+            <TableColumn fx:id="colDuration" prefWidth="279.0" text="DURATION" />
+            <TableColumn fx:id="colFree" prefWidth="198.0" text="FEE" />
+         </columns>
+      </TableView>
+      <TextField fx:id="txtSearch" layoutX="660.0" layoutY="89.0" prefHeight="35.0" prefWidth="236.0" promptText="search" style="-fx-background-radius: 5; -fx-border-color: black; -fx-border-radius: 5;" />
+   </children>
+</AnchorPane>
